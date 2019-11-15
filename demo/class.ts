@@ -134,7 +134,7 @@ TypeScript中的类
 
     // class Person {
             
-    //     public name:string;
+    //     private name:string;
     //     constructor(name:string){ 
     //         this.name = name;
     //     }
@@ -160,37 +160,37 @@ TypeScript中的类
     // var w = new Web('李四');
     // w.work();
 
-    //  类外部没法访问保护类型的属性
-        // var person = new Person('王五');
-        // console.log(person.name);
+    // //  类外部没法访问保护类型的属性
+    //     var person = new Person('王五');
+    //     console.log(person.name);
 
-//4、静态属性  静态方法
-    // class Person {
+// //4、静态属性  静态方法
+//     class Person {
             
-    //     public name:string;
-    //     public age:number = 20;
+//         public name:string;
+//         public age:number = 20;
         
-    //     static sex = '男';
-    //     constructor(name:string){ 
-    //         this.name = name;
-    //     }
+//         static sex = '男';
+//         constructor(name:string){ 
+//             this.name = name;
+//         }
 
-    //     run():void {
-    //         console.log(this.name + '在运动');
-    //     }
+//         run():void {
+//             console.log(this.name + '在运动');
+//         }
 
-    //     static print() {
-    //         console.log('static function');
-    //         // console.log(this.sex);
-    //         // console.log(Person.sex);
-    //         // console.log(this.age);
-    //     }
+//         static print() {
+//             console.log('static function');
+//             // console.log(this.sex);
+//             // console.log(Person.sex);
+//             // console.log(this.age);
+//         }
 
-    // }
+//     }
     
-    // var person = new Person('王五');
-    // person.run();                   // 调用实例方法
-    // Person.print();                 // 调用静态方法，里面没法直接调用类里面的属性
+//     var person = new Person('王五');
+//     person.run();                   // 调用实例方法
+//     Person.print();                 // 调用静态方法，里面没法直接调用类里面的属性
 
 //5、多态：父类定义一个方法不去实现，让继承它的子类去实现  每一个子类有不同的表现
 //多态属性继承，是继承的一种表现

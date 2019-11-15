@@ -16,7 +16,7 @@
 
 */
 
-// var flag:boolean = true;
+// var flag: boolean = true;
 // flag = 123;
 
 // var num:number = 123;
@@ -27,17 +27,17 @@
 
 // 数组类型
 
-    // var array = ['1','2'];    //ES5定义数组
+// var array = ['1','2'];    //ES5定义数组
 
-    // ts 中定义数组的第一种方法
-    // var array: number[] = [11, 22, 33];
+// ts 中定义数组的第一种方法
+var array: number[] = [11, 22, 33];
 
-    // ts 中定义数组的第二种方法
-    // var array1: Array<number> = [11, 22, 33];
+// ts 中定义数组的第二种方法
+// var array1: Array<number> = [11, 22, 33];
 
 // 元组类型:Tuple(给数组中每一个位置指定一个类型，属于数组的一种)
 
-    let arr: [number, string] = [123, 'ts'];
+let arr: [number, string] = [123, 'ts'];
 
 /*
     枚举类型
@@ -62,7 +62,7 @@
     // let s: Flag = Flag.success;
     // console.log(s);
 
-        
+
     // enum Color { red, blue, 'orange' };
     // let c: Color = Color.blue;
     // console.log(c);            // 如果标识符没有赋值，它的值就是下标
@@ -90,9 +90,9 @@
 
     // var a:number // 错误用法
 
-    
+
     // var a:undefined //正确用法
-    
+
     // console.log(a);
     // var a: number | undefined
 

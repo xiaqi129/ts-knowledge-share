@@ -36,7 +36,7 @@
     //接口，行为和动作的规范，对批量方法进行约束
 
 
-        // 就是传入对象的约束   属性接口
+        // // // 就是传入对象的约束   属性接口
         // interface FullName {
         //     firstName:string;
         //     lastName:string;
@@ -214,36 +214,51 @@
         
 //6、接口扩展，接口可以继承接口
 
-    // interface Animal {
+    interface Animal {
 
-    //     eat():void;
+        eat():void;
 
-    // }
+    }
 
-    // interface Person extends Animal {
+    interface Person extends Animal {
 
-    //     work():void;
+        work():void;
 
-    // }
+    }
+
+    class Programmer {
+
+        name:string
+        constructor(name:string) {
+            this.name = name;
+        }
+
+        coding() {
+            console.log(this.name + '正在写ts');
+        }
+
+    }
 
 
-    // class  Web implements Person {
+    class  Web extends Programmer implements Person {
 
-    //     public name:string;
-    //     constructor(name:string) {
-    //         this.name = name;
-    //     }
+        // public name:string;
+        constructor(name:string) {
+            // this.name = name;
+            super(name);
+        }
 
-    //     eat():void{
-    //         console.log(this.name + '在吃饭');
-    //     }
+        eat():void{
+            console.log(this.name + '在吃饭');
+        }
 
-    //     work():void {
-    //         console.log(this.name + '在工作');
-    //     }
+        work():void {
+            console.log(this.name + '在工作');
+        }
 
-    // }
+    }
 
-    // var w = new Web('齐祥');
-    // w.work();
-    // w.eat();
+    var w = new Web('齐祥');
+    w.work();
+    w.eat();
+    w.coding();

@@ -7,12 +7,24 @@
         我们需要通过export暴露模块里面的数据（变量、函数、类...）。
         暴露后我们通过 import 引入模块就可以使用模块里面暴露的数据（变量、函数、类...）。
 
-*/  
+*/
 
-// import { getData,save } from '../module/db';
 
-// import getData from '../module/db';
+// import { MysqlDb } from '../module/db'
 
-// getData();
+// import { MysqlDb, MongoDb } from '../module/db'
 
-// save();
+// import MysqlDb from '../module/db';
+
+// class User {
+//     username: string | undefined;
+//     password: string | undefined;
+// }
+
+
+// var u = new User();
+// u.username = '张三2222';
+// u.password = '123456';
+
+// var oMssql = new MysqlDb<User>();
+// oMssql.add(u);

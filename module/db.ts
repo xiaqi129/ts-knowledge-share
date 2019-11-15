@@ -1,40 +1,90 @@
 
-var dbUrl='xxxxxx';
-
-
-export function getData():any[]{
-
-    console.log('获取数据库的数据');
-
-    return [
-
-        {
-
-            title:'121312'
-        },
-        {
-
-            title:'121312'
-        }
-    ]
+interface DBI<T> {
+    add(info: T): boolean;
+    update(info: T, id: number): boolean;
+    delete(id: number): boolean;
+    get(id: number): any[];
 }
 
+//定义一个操作mysql数据库的类       注意：要实现泛型接口 这个类也应该是一个泛型类
 
+ class MysqlDb<T> implements DBI<T>{
 
-export function save(){
+    constructor() {
 
-    console.log('保存数据成功');
+        console.log('数据库建立连接');
+    }
+    add(info: T): boolean {
+
+        console.log(info);
+
+        return true;
+
+    }
+
+    update(info: T, id: number): boolean {
+        throw new Error("Method not implemented.");
+    }
+    delete(id: number): boolean {
+        throw new Error("Method not implemented.");
+    }
+    get(id: number): any[] {
+        var list = [
+
+            {
+                title: 'xxxx',
+                desc: 'xxxxxxxxxx'
+            },
+            {
+                title: 'xxxx',
+                desc: 'xxxxxxxxxx'
+            }
+        ]
+
+        return list;
+    }
+
 }
 
-// export { dbUrl, getData, save }
-
-/*
-
-export default 默认导出
-每个模块都可以有一个default导出。默认导出使用default关键字标记，并且一个模块只能够有一个default导出。需要使用一种特殊的导入形式来导入
+//定义一个操作mongoDb数据库的类  
 
 
-*/
+  class MongoDb<T> implements DBI<T>{
+
+    constructor() {
+
+        console.log('数据库建立连接');
+    }
+    add(info: T): boolean {
+        console.log(info);
+        return true;
+    }
+    update(info: T, id: number): boolean {
+        throw new Error("Method not implemented.");
+    }
+    delete(id: number): boolean {
+        throw new Error("Method not implemented.");
+    }
+    get(id: number): any[] {
 
 
-// export default getData;
+        var list = [
+
+            {
+                title: 'xxxx',
+                desc: 'xxxxxxxxxx'
+            },
+            {
+                title: 'xxxx',
+                desc: 'xxxxxxxxxx'
+            }
+        ]
+
+        return list;
+    }
+
+}
+
+// export { MysqlDb, MongoDb };
+
+export default MysqlDb

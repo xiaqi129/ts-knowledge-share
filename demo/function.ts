@@ -78,11 +78,8 @@
 
         // function getInfo(name:string,age:number=20):string {
 
-        //     if(age) {
-        //         return `${name} --- ${age}`;
-        //     } else {
-        //         return `${name} --- 年龄保密`;
-        //     }
+        //     return `${name} --- ${age}`;
+
         // }
 
         // console.log(getInfo('张三'));
@@ -108,7 +105,7 @@
         //     return sum;
         // }
 
-        // console.log(sum(1,2,3,4));
+        // console.log(sum(1,2,3,4,5,6));
 
     //另一种剩余参数的写法
         // function sum(a:number, b:number, ...result:number[]):number {

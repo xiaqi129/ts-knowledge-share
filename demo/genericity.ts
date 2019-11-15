@@ -66,7 +66,7 @@
         //     return value;
         // }
 
-        // getData(<number>123);
+        // getData(123);
 
 //3、泛型类：泛型可以帮助我们避免重复的代码以及对不特定数据类型的支持（类型效验）
 
@@ -190,7 +190,7 @@
 
         // getData(<string>'张三');  // 正确写法
 
-        // getData(<string>123);    //错误写法
+        // // getData(<string>123);    //错误写法
 
         // var myGetData:ConfigFn<string> = getData;
 
@@ -252,12 +252,12 @@
 
     //     }
 
-    //     // add(info:Article):boolean {
+        // add(info:Article):boolean {
             
-    //     //     console.log(info);
-    //     //     return true;
+        //     console.log(info);
+        //     return true;
 
-    //     // }
+        // }
 
     // }
     // var Db = new MysqlDb();
@@ -267,11 +267,11 @@
     // u.password = '123456';
     // Db.add(u);
 
-    // // var a = new Article();
-    // // a.title = '国内新闻';
-    // // a.desc = '新闻内容';
-    // // a.status = 1;
-    // // Db.add(a);
+    // var a = new Article();
+    // a.title = '国内新闻';
+    // a.desc = '新闻内容';
+    // a.status = 1;
+    // Db.add(a);
 
 // 操作数据库的泛型类
 
@@ -300,9 +300,9 @@
     // u.username = 'xiaqi';
     // u.password = '123456';
     
-    // var Db = new MysqlDb();
+    // var Db = new MysqlDb<User>();
     // Db.add(u);
-    // Db.add('1231')
+    // Db.add('1231');
 
 //2、定义一个ArticleCate类，和数据库进行映射
 
